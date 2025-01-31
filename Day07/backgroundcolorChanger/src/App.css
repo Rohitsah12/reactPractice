@@ -1,0 +1,20 @@
+button{
+  width: 70px;
+  height: 40px;
+  margin-right: 10px;
+  color: white;
+}
+
+.counter{
+  height: 200px;
+  width: 300px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.counter button{
+  background-color: black;
+  color: white;
+  border: 1px solid gray;
+  border-radius:5px ;
+}
