@@ -17,7 +17,6 @@ function App() {
     setResult(Fibonacci(Number(number)))
   },[clicked])
   return (
-
     <>
       <h1>Count is:{count}</h1>
       <button onClick={()=>setCount(count+1)}>Increment</button>
