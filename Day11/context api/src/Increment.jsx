@@ -1,7 +1,5 @@
-import { useState } from "react";
 
-export default function Increment(){
-  const [counts,setCounts]=useState(0);
+export default function Increment({counts,setCounts}){
 
     return(
         <>
