@@ -6,6 +6,7 @@ import Details from "./Details"
 import Zero from "./Zero"
 import Hello from "./Hello"
 import Hi from "./Hi"
+import Github from "./Github"
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
       <Link to="/contact">Contact</Link>
       <Link to="/dashboard">dashboard</Link>
       <Link to="/details">Details</Link>
+      <Link to="/Github">Github</Link>
     </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -25,6 +27,8 @@ function App() {
           <Route path="Hello" element={<Hello />}></Route>
           <Route path="Hi" element={<Hi />}></Route>
         </Route>
+
+        <Route path="/Github/:name" element={<Github />}></Route>
       </Routes>
     </BrowserRouter>
   )
