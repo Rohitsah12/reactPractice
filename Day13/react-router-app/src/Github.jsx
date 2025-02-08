@@ -3,7 +3,6 @@ import {useParams} from "react-router"
 
 export default function Github(){
     const {name}=useParams();
-    // console.log(name);
 
     const [profile,setProfile] =useState(null);
     
