@@ -1,5 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
-
+//original object:Draft{Duplicate objet}:
+//iMMER :New Draft krta hai
 const reactSlicer=createSlice({
     name:"slice1",
     initialState:{count:0},
@@ -11,4 +12,5 @@ const reactSlicer=createSlice({
 })
 
 export const{Increment,Decrement,Reset}=reactSlicer.actions
+//actions:{type:"slice1/Increment",payload:undefined}
 export default reactSlicer.reducer;
