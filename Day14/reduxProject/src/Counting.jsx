@@ -4,6 +4,7 @@ import { Increment,Decrement,Reset } from './Slicer1';
 export default function Counting(){
 
     const count=useSelector((state)=>state.slice1.count);
+    //subscribing to the event
     const dispatch=useDispatch();
     return(
         <>
