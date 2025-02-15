@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-
+//redux
 const FoodSlicer=createSlice({
     name:'slice1',
     initialState:{count:0},
