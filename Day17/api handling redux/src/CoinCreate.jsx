@@ -5,7 +5,6 @@ import CoinCard from "./CoinCard";
 
 export default function CoinCreate(){
     const dispatch=useDispatch();
-
     const {data,loading,error}=useSelector((state)=>state.slice1)
     useEffect(()=>{
         dispatch(fetchData(20));
