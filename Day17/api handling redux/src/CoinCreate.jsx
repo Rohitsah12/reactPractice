@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "./slicer1";
 import CoinCard from "./CoinCard";
-
 export default function CoinCreate(){
     const dispatch=useDispatch();
     const {data,loading,error}=useSelector((state)=>state.slice1)
