@@ -14,7 +14,6 @@ export default function CoinCreate(){
     if(error){
         return<h1>Error has occured</h1>
     }
-
     return(
         <>
             <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
