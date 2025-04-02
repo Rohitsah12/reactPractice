@@ -1,0 +1,39 @@
+
+
+#input{
+    border: none;
+}
+
+#submit{
+    padding:5px;
+    color: white;
+    background-color: cadetblue;
+    border: none;
+    margin-left: 10px;
+}
+
+#display{
+    margin-top: 35px;
+    background-color: dodgerblue;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+ul{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+li{
+    list-style-type: none;
+    justify-content: space-between;
+}
+li span{
+    display: block;
+}
+
+span{
+    font-size: 50px;
+}
