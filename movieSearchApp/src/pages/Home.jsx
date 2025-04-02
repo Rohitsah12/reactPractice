@@ -1,25 +1,33 @@
+import { useEffect, useState } from "react";
+
+import searchMovie from '../apis/omdb'
 import MovieCard from "../components/Navbar/MovieCard/MovieCard";
 import './Home.css'
+import axios from "axios";
+
 function Home(){
-    const movie={
-        "Title":"Harry Potter and the Deathly Hallows: Part 2",
-        "Year":"2011",
-        "imdbID":"tt1201607",
-        "Type":"movie",
-        "Poster":"https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg"
-      }
+    const [movieList,setMovieList]=useState([]);
+    async function downloaddefaultMovies(...args){
+        // console.log(response.data);
+        // setMovieList(response.data.Search);
+        // console.log(args);
+        const urls=args.map((name)=>searchMovie(name));
+        const response=await axios.all(urls.map(url =>axios.get(url)));
+        const movies=response.map((movieResponse)=>movieResponse.data.Search);
+        setMovieList([].concat(...movies))
+
+        
+    }
+    useEffect(()=>{
+        downloaddefaultMovies('harry','avengers');
+    },[]);
+
     return(
         <>
             <div className="movie-card-wrapper">
-            <MovieCard
-                {...movie}
-             />
-             <MovieCard
-                {...movie}
-             />
-             <MovieCard
-                {...movie}
-             />
+                {movieList.map(movie=> <MovieCard key={movie.imdbID}
+                    {...movie}
+                />)}
             </div>
             
         </>
