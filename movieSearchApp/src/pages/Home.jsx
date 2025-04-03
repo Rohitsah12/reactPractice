@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import searchMovie from '../apis/omdb'
-import MovieCard from "../components/Navbar/MovieCard/MovieCard";
+import MovieCard from "../components/MovieCard/MovieCard";
 import './Home.css'
 import axios from "axios";
 
