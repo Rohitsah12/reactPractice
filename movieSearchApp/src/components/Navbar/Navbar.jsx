@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import './Navbar.css';
 import useMovieList from '../../hooks/useMovieList';
+import useDebounce from '../../hooks/useDebounce';
 
 function Navbar(){
 
@@ -20,9 +21,9 @@ function Navbar(){
                 onBlur={()=>{
                     resultListRef.current.style.display='none';
                 }}
-                onChange={(e)=>{
+                onChange={useDebounce((e)=>{
                     setSearchTerm(e.target.value);
-                }}
+                })}
                     placeholder='what movie are you thinking about'
                 />
                 <div id='result-list' ref={resultListRef}>
