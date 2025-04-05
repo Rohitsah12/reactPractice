@@ -8,6 +8,10 @@ function Navbar(){
     const resultListRef=useRef(null);
     const [searchTerm,setSearchTerm]=useState('');
     const {movieList}=useMovieList(!searchTerm?'avengers':searchTerm);
+
+    function handleAutoCompleteClick(e,movieImdbId){
+        
+    }
     return(
         <div className="navbar-wrapper">
             <div>MovieBase</div>
@@ -27,7 +31,7 @@ function Navbar(){
                     placeholder='what movie are you thinking about'
                 />
                 <div id='result-list' ref={resultListRef}>
-                {movieList.length>0 && movieList.map(movie=><div key={movie.imdbID} className='autocomplete-result'>{movie.Title}</div>)}
+                {movieList.length>0 && movieList.map(movie=><div onMouseDown={(e)=>handleAutoCompleteClick(e,movie.imdbID)}key={movie.imdbID} className='autocomplete-result' >{movie.Title}</div>)}
                    
 
                 </div>
